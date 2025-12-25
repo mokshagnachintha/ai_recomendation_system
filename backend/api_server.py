@@ -1,6 +1,12 @@
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
+import sys
+import os
+
+# Add current directory to sys.path so local imports work on Vercel
+sys.path.append(os.path.dirname(os.path.abspath(__file__)))
+
 from recommendation_engine import ProductRecommender
 
 app = FastAPI(title="AI Product Recommender")

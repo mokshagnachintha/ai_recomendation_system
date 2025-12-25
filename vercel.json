@@ -12,5 +12,10 @@
             "source": "/(.*)",
             "destination": "/frontend/$1"
         }
-    ]
+    ],
+    "functions": {
+        "backend/api_server.py": {
+            "maxDuration": 10
+        }
+    }
 }
