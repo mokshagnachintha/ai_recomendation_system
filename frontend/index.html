@@ -48,8 +48,8 @@
                 setRecommendations([]);
 
                 try {
-                    // Assuming FastAPI is running on localhost:8000
-                    const response = await axios.post('http://localhost:8000/recommend', {
+                    // Use relative path for Vercel deployment
+                    const response = await axios.post('/api/recommend', {
                         preference: preference
                     });
                     setRecommendations(response.data.recommendations);

@@ -19,7 +19,7 @@ recommender = ProductRecommender()
 class UserRequest(BaseModel):
     preference: str
 
-@app.post("/recommend")
+@app.post("/api/recommend")
 async def recommend(request: UserRequest):
     try:
         recommendations = recommender.get_recommendations(request.preference)
